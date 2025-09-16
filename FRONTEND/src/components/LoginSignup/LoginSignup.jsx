@@ -130,7 +130,8 @@ export default function LoginSignup() {
     navigate("/recuperar-contraseña");
   };
 
-  const BASE = "https://proyecto-inmueble.onrender.com/usuario"; // recuerda los slashes al final en fetch
+ const BASE = `${process.env.REACT_APP_API_URL}/usuario`;
+ // recuerda los slashes al final en fetch
 
   // Helper para POST con manejo de JSON/HTML
   async function postJSON(url, body) {

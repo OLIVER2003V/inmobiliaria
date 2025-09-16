@@ -144,10 +144,11 @@ STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CORS_ALLOWED_ORIGINS = [
+    "https://staging.d3kmgk0vkfdvym.amplifyapp.com",
     "http://localhost:3000", "http://localhost:5173",
 ]
 CSRF_TRUSTED_ORIGINS = [
-    "http://localhost:3000", "http://localhost:5173",
+    "https://staging.d3kmgk0vkfdvym.amplifyapp.com",
 ]
 
 REST_FRAMEWORK = {
