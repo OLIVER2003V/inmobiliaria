@@ -22,7 +22,8 @@ class Usuario(AbstractUser):
     correo = models.EmailField(unique=True, null=True, blank=True)
     ci = models.CharField(max_length=20, unique=False, null=True, blank=True)
     telefono = models.CharField(max_length=20, null=True, blank=True)
-    idRol = models.ForeignKey(Rol, on_delete=models.RESTRICT, db_column="idRol")
+    idRol = models.ForeignKey('usuario.Rol', on_delete=models.PROTECT)
+   
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
